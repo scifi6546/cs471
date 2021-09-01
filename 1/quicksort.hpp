@@ -5,6 +5,7 @@
 #ifndef QUICKSORT
 #define QUICKSORT
 #include <vector>
+// Preconditions low and high are greater then zero and less then in.size()
 int partition(std::vector<int> &in, int low,int high){
 	int pivot = in[high];
 	int i = low-1;
@@ -22,7 +23,8 @@ int partition(std::vector<int> &in, int low,int high){
 
 
 }
-void sort(std::vector<int> &in,int low, int high){
+// Preconditions low and high are greater then zero and less then in.size()
+void sort(std::vector<int> &in,int low,int high){
 	if(low>=0 && high>=0){
 		if(low<high){
 			int p = partition(in,low,high);
